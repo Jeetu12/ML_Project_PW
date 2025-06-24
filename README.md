@@ -2,24 +2,15 @@
 
 **`README.md`** for GitHub repository:
 
-
-```markdown
-
 # Cryptocurrency Liquidity Prediction using Machine Learning
 
 - This project uses historical cryptocurrency data to **predict liquidity ratios**, helping traders and exchanges anticipate potential market instability. It includes data preprocessing, feature engineering, model training, evaluation, and deployment using both **Flask API** and **Streamlit web app**.
 
----
-
 ## Problem Statement
 
-- Cryptocurrency markets are **highly volatile**, and **liquidity** plays a critical role in price stability. Predicting liquidity helps exchanges manage risks and informs traders during times of high uncertainty.
-
----
+- Cryptocurrency markets are **highly volatile**, and **liquidity** plays a critical role in price stability. Predicting liquidity helps exchanges manage risks and informs traders during high uncertainty.
 
 ## Project Structure
-
-```
 
 crypto-liquidity-prediction/
 │
@@ -43,10 +34,6 @@ crypto-liquidity-prediction/
 ├── README.md
 └── requirements.txt
 
-````
-
----
-
 ## Features & Target
 
 - **Input Features**:
@@ -65,17 +52,15 @@ crypto-liquidity-prediction/
 
 ## Model Used
 
-- ✅ `RandomForestRegressor`
+- `RandomForestRegressor`
 
-- 🔁 `GridSearchCV` for hyperparameter tuning
+- `GridSearchCV` for hyperparameter tuning
 
-- 📈 Metrics:
+- Metrics:
 
   - **R² Score**: ~0.94
 
   - **RMSE**: Low, consistent performance
-
----
 
 ## Deployment
 
@@ -85,7 +70,7 @@ crypto-liquidity-prediction/
 streamlit run app/streamlit_app.py
 ````
 
-### ✅ Flask API
+### Flask API
 
 ```bash
 python app/flask_app.py
@@ -103,26 +88,17 @@ POST Request Example:
   "mkt_cap": 770000000000
 }
 ```
-
----
-
 ## Sample Output
 
-```
 Predicted Liquidity Ratio: 0.045832
-```
-
----
 
 ## Future Enhancements
 
-* Add LSTM or XGBoost model for improved accuracy
+* Add an LSTM or XGBoost model for improved accuracy
 
 * Integrate live data from APIs
 
 * Extend time series trends using moving averages
-
----
 
 ## Tech Stack
 
@@ -134,16 +110,11 @@ Predicted Liquidity Ratio: 0.045832
 
 * Matplotlib, Seaborn
 
----
-
 ## Author
 
 **Arijit Chakraborty** — [EduFinTech](https://www.edufintech.co.in)
-
----
 
 ## License
 
 MIT License
 
----
