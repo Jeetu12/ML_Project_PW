@@ -4,7 +4,7 @@
 
 # Cryptocurrency Liquidity Prediction using Machine Learning
 
-- This project uses historical cryptocurrency data to **predict liquidity ratios**, helping traders and exchanges anticipate potential market instability. It includes data preprocessing, feature engineering, model training, evaluation, and deployment using both **Flask API** and **Streamlit web app**.
+This project utilizes historical cryptocurrency data to **predict liquidity ratios**, enabling traders and exchanges to anticipate potential market instability. It includes data preprocessing, feature engineering, model training, evaluation, and deployment using both **Flask API** and **Streamlit web app**.
 
 ## Problem Statement
 
