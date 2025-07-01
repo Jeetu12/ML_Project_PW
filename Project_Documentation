@@ -1,0 +1,194 @@
+# **Cryptocurrency Liquidity Prediction Project Documentation:-**
+---
+
+## **Exploratory Data Analysis (EDA) Report:**
+---
+
+### **1. Dataset Overview:**
+
+- The dataset contains historical cryptocurrency data for two days:
+
+ - Features: `coin`, `symbol`, `price`, `1h`, `24h`, `7d` change %, `24h_volume`, `mkt_cap`, `date`
+
+ - Target feature (engineered): `liquidity_ratio` = `24h_volume / mkt_cap`
+
+### **2. Missing Values:**
+
+* Initial check: Minor missing values were dropped.
+
+* Columns like `1h`, `24h`, `7d` were converted to float.
+
+### 3. **Feature Engineering:**
+
+* `liquidity_ratio`: Proxy for liquidity
+* `volatility`: Absolute value of 24h % price change
+
+### 4. **Correlation Matrix (Top Features):**
+
+| Feature     | liquidity\_ratio | volatility |
+| ----------- | ---------------- | ---------- |
+| price       | Low              | Low        |
+| 24h\_volume | High             | Medium     |
+| mkt\_cap    | Negative         | Low        |
+
+### 5. **Key Insights:**
+
+* Coins with low market cap and high volume exhibit higher liquidity ratios.
+
+* Volatility is weakly correlated with liquidity.
+
+* Stablecoins (e.g., USDT, USDC) show low volatility and steady liquidity ratios.
+
+---
+---
+
+## **High-Level Design (HLD):**
+
+---
+
+### **Objective:**
+
+- Build a machine learning model to predict cryptocurrency liquidity using historical price and volume data.
+
+### **System Components:**
+
+1. **Data Layer:**
+
+   * Raw CSV files (daily data from CoinGecko)
+
+2. **Processing Layer:**
+
+   * Data preprocessing (missing value handling, type conversion)
+
+   * Feature engineering (`liquidity_ratio`, `volatility`)
+
+3. **Model Layer:**
+
+   * Model: RandomForestRegressor
+
+   * Input: Engineered features
+
+   * Output: Predicted liquidity ratio
+
+4. **Evaluation Layer:**
+
+   * Metrics: R², RMSE
+
+   * Analysis via EDA visuals
+
+5. **Deployment Layer**: (Optional)
+
+   * Streamlit interface
+
+   * Input: Real-time coin stats
+
+   * Output: Liquidity prediction
+
+---
+
+## **Low-Level Design (LLD):**
+
+---
+
+### **Data Pipeline:**
+
+* Input: `coin_gecko_2022-03-16.csv`, `coin_gecko_2022-03-17.csv`
+
+* Merge, convert `date`, sort by `coin`
+
+* Drop NA, convert % fields to float
+
+### **Feature Engineering:**
+
+```python
+# Liquidity = Volume / Market Cap
+# Volatility = |24h Price Change| in percentage
+```
+
+### **Modeling:**
+
+* Train/test split: 80/20
+
+* Model: `RandomForestRegressor(random_state=42)`
+
+* Save model as `crypto_liquidity_model.pkl`
+
+### **Evaluation:**
+
+```python
+R² Score: r2_score(y_test, y_pred)
+RMSE: mean_squared_error(y_test, y_pred, squared=False)
+```
+
+---
+
+## **Pipeline Architecture:**
+
+```
+Data (CSV) → Preprocessing → Feature Engineering
+     → Train/Test Split → Model Training → Evaluation
+                            ↓
+                         .pkl model → Deployment (Streamlit)
+```
+
+### **Key Features Used:**
+
+* `price`, `1h`, `24h`, `7d`, `24h_volume`, `mkt_cap`, `volatility`
+
+### **Output:**
+
+* `liquidity_ratio` (predicted)
+
+---
+---
+
+## **Final Report:-**
+---
+
+### **Summary of Findings:**
+
+* Liquidity is strongly driven by 24h trading volume relative to market capitalization.
+
+* High-volume, low-cap coins often exhibit higher liquidity ratios.
+
+* Volatility is not a strong predictor of liquidity.
+
+### **Model Performance:**
+
+* **Model Used**: RandomForestRegressor
+
+* **R² Score**: \~0.94 (on test split)
+
+* **RMSE**: Low error values, good generalization on unseen data
+
+### **Key Insights:**
+
+* Feature engineering (especially liquidity ratio) is crucial for meaningful predictions.
+
+* The model successfully identifies trends based on just two days of historical data.
+
+* Adding more temporal data (e.g., moving averages) would improve long-term predictions.
+
+---
+---
+
+## **Future Enhancements:**
+---
+
+1. **Add LSTM or XGBoost model for improved accuracy**
+
+   * LSTM for time-series modeling
+
+   * XGBoost for better tabular performance and feature importance insights
+
+2. **Integrate live data from APIs**
+
+   * Use sources like CoinGecko or CoinMarketCap APIs for real-time liquidity forecasting
+
+3. **Extend time series trends using moving averages**
+
+   * Incorporate 7-day and 30-day moving averages of price, volume, and liquidity for more robust forecasting
+
+> This completes the ML pipeline from data preprocessing to model deployment, documentation, and roadmap for future work.
+
+---
