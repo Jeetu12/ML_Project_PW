@@ -78,6 +78,22 @@ crypto-liquidity-prediction/
 ├── README.md
 └── requirements.txt
 
+---
+
+# Requirements
+
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+joblib
+flask
+streamlit
+pytest
+
+---
+
 ## Features & Target
 
 - **Input Features**:
