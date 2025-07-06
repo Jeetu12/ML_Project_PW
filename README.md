@@ -42,7 +42,7 @@ This project utilizes historical cryptocurrency data to **predict liquidity rati
 
 ## **5. Evaluation Plots (Residuals and Predictions):**
 
-- Residual plot for the final model. We plot each prediction’s residual (error = actual–predicted) against the predicted value.  An ideal residual plot looks like a random cloud centered at zero, indicating no clear pattern or heteroskedasticity.  In practice, we check that the residuals cluster around zero with roughly equal spread across all predicted values.  Any funnel shape or trend would signal model misspecification.
+- Residual plot for the final model. We plot each prediction’s residual (error = actual–predicted) against the expected value.  An ideal residual plot appears as a random cloud centered at zero, indicating no discernible pattern or heteroskedasticity.  In practice, we check that the residuals cluster around zero with roughly equal spread across all predicted values.  Any funnel shape or trend would signal model misspecification.
 
 - Predicted vs. Actual scatter (two example models). Perfect predictions lie on the diagonal line; points tight around that line indicate high accuracy.  In the left panel (R²=0.81), the green points fall near the diagonal, showing a good fit.  In the right panel (R² = 0.24), points deviate widely from the line, indicating a poor model fit.  This chart is a rich diagnostic: a strong linear pattern indicates an accurate model, while deviations or outliers highlight remaining errors.
 
@@ -58,7 +58,7 @@ This project utilizes historical cryptocurrency data to **predict liquidity rati
 
 crypto-liquidity-prediction/
 │
-├── data/                        # Raw CSV files from CoinGecko
+├── .CSV data files/                        # Raw CSV files from CoinGecko
 │
 ├── notebooks/
 │   └── Crypto\_Liquidity.ipynb   # Google Colab notebook (EDA + modeling)
