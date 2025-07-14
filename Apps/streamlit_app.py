@@ -5,7 +5,7 @@ import os
 
 st.set_page_config(page_title="Crypto Liquidity Predictor (Colab)", layout="centered")
 
-st.title("💧 Crypto Liquidity Predictor (Colab)")
+st.title(" Crypto Liquidity Predictor (Colab)")
 st.markdown("Predict the **liquidity ratio** of a cryptocurrency using a trained ML model.")
 
 # Load model
@@ -34,7 +34,7 @@ if st.button("Predict Liquidity Ratio"):
     prediction = model.predict(input_data)[0]
     st.success(f"🔍 Predicted Liquidity Ratio: {round(prediction, 6)}")
 
-    st.markdown("### 📌 Inputs")
+    st.markdown("### Inputs")
     st.json({
         "Price": price,
         "1h Change": pct_1h,
