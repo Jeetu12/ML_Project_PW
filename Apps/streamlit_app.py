@@ -13,10 +13,10 @@ import warnings
 warnings.filterwarnings("ignore")
 st.set_page_config(page_title="Crypto Liquidity Predictor", layout="wide")
 
-st.title("💧 Crypto Liquidity Prediction App")
+st.title("Crypto Liquidity Prediction App")
 
 # === Upload 2 CSVs ===
-uploaded_files = st.file_uploader("📂 Upload 2 CoinGecko CSV Files", type=["csv"], accept_multiple_files=True)
+uploaded_files = st.file_uploader("Upload 2 CoinGecko CSV Files", type=["csv"], accept_multiple_files=True)
 
 if len(uploaded_files) != 2:
     st.warning("Please upload **2 CSV files** to continue.")
@@ -47,7 +47,7 @@ st.subheader("🔍 Sample Data Preview")
 st.dataframe(df.head())
 
 # === EDA: Correlation Heatmap ===
-st.subheader("📊 Feature Correlation Heatmap")
+st.subheader("Feature Correlation Heatmap")
 features_corr = ['price', '24h_volume', 'mkt_cap', 'liquidity_ratio', 'volatility']
 if all(col in df.columns for col in features_corr):
     fig, ax = plt.subplots()
@@ -57,7 +57,7 @@ else:
     st.warning("Not all required columns available for correlation heatmap.")
 
 # === Model Training ===
-st.subheader("🧠 Train Random Forest Regressor")
+st.subheader("Train Random Forest Regressor")
 
 features = ['price', '1h', '24h', '7d', '24h_volume', 'mkt_cap', 'volatility']
 target = 'liquidity_ratio'
@@ -85,18 +85,18 @@ model_filename = "crypto_liquidity_model.pkl"
 with open(model_filename, "wb") as f:
     pickle.dump(model, f)
 
-st.success(f"✅ Model trained and saved as `{model_filename}`")
-st.write("📈 Best Parameters from GridSearch:", best_params)
+st.success(f"Model trained and saved as `{model_filename}`")
+st.write("Best Parameters from GridSearch:", best_params)
 
 # === Evaluation ===
-st.subheader("📉 Model Performance")
+st.subheader("Model Performance")
 r2 = r2_score(y_test, y_pred)
 rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 st.metric(label="R² Score", value=f"{r2:.4f}")
 st.metric(label="RMSE", value=f"{rmse:.4f}")
 
 # === Prediction Form ===
-st.subheader("🔮 Predict Liquidity Ratio")
+st.subheader("Predict Liquidity Ratio")
 
 price = st.number_input("Current Price (USD)", value=100.0)
 pct_1h = st.number_input("1h Change (%)", value=0.5)
@@ -107,12 +107,12 @@ market_cap = st.number_input("Market Cap", value=100_000_000.0)
 
 volatility = abs(pct_24h)
 
-if st.button("🚀 Predict Now"):
+if st.button("Predict Now"):
     input_data = np.array([[price, pct_1h, pct_24h, pct_7d, vol_24h, market_cap, volatility]])
     prediction = model.predict(input_data)[0]
-    st.success(f"📈 Predicted Liquidity Ratio: **{round(prediction, 6)}**")
+    st.success(f"Predicted Liquidity Ratio: **{round(prediction, 6)}**")
 
-    st.markdown("### 📋 Input Summary")
+    st.markdown("### Input Summary")
     st.json({
         "Price": price,
         "1h %": pct_1h,
@@ -124,4 +124,4 @@ if st.button("🚀 Predict Now"):
     })
 
 st.markdown("---")
-st.caption("Built with ❤️ using Streamlit + RandomForestRegressor")
+st.caption("Built with using Streamlit + RandomForestRegressor")
