@@ -82,15 +82,29 @@ crypto-liquidity-prediction/
 
 # Requirements
 
-pandas
+# Core ML & Data
 numpy
+pandas
+scikit-learn
 matplotlib
 seaborn
-scikit-learn
-joblib
-flask
-streamlit
-pytest
+
+# For saving/loading models
+pickle5  # optional if using older Python
+
+# API & App options
+flask     # for Flask API
+streamlit # for Streamlit UI
+
+# Optional (PDFs, Visual Reports)
+fpdf
+
+# Version pinning (optional for stability)
+# numpy==1.24.3
+# scikit-learn==1.3.0
+# flask==2.3.3
+# streamlit==1.35.0
+
 
 ---
 
