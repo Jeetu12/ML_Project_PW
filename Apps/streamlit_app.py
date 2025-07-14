@@ -9,13 +9,15 @@ st.title("💧 Crypto Liquidity Predictor (Colab)")
 st.markdown("Predict the **liquidity ratio** of a cryptocurrency using a trained ML model.")
 
 # Load model
-model_path = "Models/crypto_liquidity_model.pkl"
+model_path = "crypto_liquidity_model.pkl"
+
 if not os.path.exists(model_path):
-    st.error("Model file not found.")
+    st.error(f"Model file '{model_path}' not found. Please train and save the model first.")
     st.stop()
 
 with open(model_path, "rb") as f:
     model = pickle.load(f)
+
 
 # Input Fields
 price = st.number_input("Current Price (USD)", value=100.0)
