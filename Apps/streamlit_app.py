@@ -3,9 +3,9 @@ import numpy as np
 import pickle
 import os
 
-st.set_page_config(page_title="Crypto Liquidity Predictor (Colab)", layout="centered")
+st.set_page_config(page_title="Crypto Liquidity Predictor", layout="centered")
 
-st.title("💧 Crypto Liquidity Predictor (Colab)")
+st.title("💧 Crypto Liquidity Predictor")
 st.markdown("Predict the **liquidity ratio** of a cryptocurrency using a trained ML model.")
 
 # Load model
