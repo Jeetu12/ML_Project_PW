@@ -43,7 +43,7 @@ for col in ['1h', '24h', '7d']:
 df['liquidity_ratio'] = df['24h_volume'] / df['mkt_cap']
 df['volatility'] = df['24h'].abs()
 
-st.subheader("🔍 Sample Data Preview")
+st.subheader("Sample Data Preview")
 st.dataframe(df.head())
 
 # === EDA: Correlation Heatmap ===
