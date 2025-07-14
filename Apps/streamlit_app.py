@@ -9,7 +9,7 @@ st.title("💧 Crypto Liquidity Ratio Predictor")
 st.markdown("Upload cryptocurrency market data to predict the liquidity ratio using a trained machine learning model.")
 
 # === Load the Model ===
-model_path = "crypto_liquidity_model.pkl"
+model_path = "t_crypto_liquidity_model.pkl"
 
 if not os.path.exists(model_path):
     st.error("❌ Trained model file not found! Please make sure 'crypto_liquidity_model.pkl' is in the same directory.")
