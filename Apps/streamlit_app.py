@@ -9,7 +9,7 @@ st.title("💧 Crypto Liquidity Predictor (Colab)")
 st.markdown("Predict the **liquidity ratio** of a cryptocurrency using a trained ML model.")
 
 # Load model
-model_path = "crypto_liquidity_model.pkl"
+model_path = "Models/crypto_liquidity_model.pkl"
 if not os.path.exists(model_path):
     st.error("Model file not found.")
     st.stop()
