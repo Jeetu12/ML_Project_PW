@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: crypto-liquidity-api
+    name: Crypto Liquidity Prediction
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python app.py
