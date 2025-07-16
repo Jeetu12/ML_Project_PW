@@ -73,7 +73,19 @@ CryptoCurrency_Liquidity_Prediction/
 ├── Reports/
 │   ├── EDA_Report.pdf           # Summary of EDA & insights
 │   ├── HLD_Document.pdf         # High-Level Design
-│   └── LLD_Document.pdf         # Low-Level Design
+│   ├── LLD_Document.pdf         # low-Level Design
+│   ├── Final_Report.pdf
+│   ├── Live_Crypto_Visual_Report.pdf
+│   ├── Pipeline_Architecture.pdf
+|   ├── Visual_Report_Crypto_Liquidity.pdf
+│   ├── Predicted_vs_Actual.png
+|   ├── Heatmap.png 
+|   ├── Feature_importance.png
+|   ├── Visual_Report.py
+|
+├── Testing/
+│   ├── PyTest.py           
+│   ├── Test.py
 │
 ├── README.md
 └── requirements.txt
