@@ -24,7 +24,7 @@ This project utilizes historical cryptocurrency data to **predict liquidity rati
 
 ## **2. Feature Correlation Heatmap:**
 
-- Correlation heatmap of the engineered features. Each cell’s color shows the pairwise Pearson correlation (dark = strong positive, light = strong negative). This lets us spot features that move together (e.g., price and volume), which may inform feature selection or multicollinearity checks.  In the heatmap above, we easily identify clusters of highly-correlated inputs (e.g., “Volatility” vs “Trading Volume” in a real crypto dataset) versus near-zero correlations.  In general, a correlation matrix and heatmap help summarize interdependencies among all numeric variables, guiding dimensionality reduction or indicating features to merge or drop.
+- Correlation heatmap of the engineered features. Each cell’s color shows the pairwise Pearson correlation (dark = strong positive, light = strong negative). This allows us to identify features that move together (e.g., price and volume), which may inform feature selection or multicollinearity checks.  In the heatmap above, we can easily identify clusters of highly correlated inputs (e.g., “Volatility” vs. “Trading Volume” in a real crypto dataset) versus those with near-zero correlations.  In general, a correlation matrix and heatmap help summarize interdependencies among all numeric variables, guiding dimensionality reduction or indicating features to merge or drop.
 
 ---
 
@@ -56,7 +56,7 @@ This project utilizes historical cryptocurrency data to **predict liquidity rati
 
 ## Project Structure
 
-crypto-liquidity-prediction/
+CryptoCurrency_Liquidity_Prediction/
 │
 ├── .CSV data files/                        # Raw CSV files from CoinGecko
 │
