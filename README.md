@@ -62,7 +62,7 @@ CryptoCurrency_Liquidity_Prediction/
 ├── .CSV data files/                   # Raw CSV files from CoinGecko
 │
 ├── Notebooks/
-│   └── crypto_Liquidity_model.ipynb   # Google Colab notebook (EDA + modeling)
+│   └── crypto_Liquidity_model.ipynb   # Jupyter & Google Colab notebook (EDA + modeling)
 │
 ├── Apps/
 │   ├── flask\flask_app.py             # Flask API for deployment
