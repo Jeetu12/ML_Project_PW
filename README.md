@@ -188,7 +188,4 @@ Predicted Liquidity Ratio: 0.045832
 
 **Arijit Chakraborty** — [EduFinTech](https://www.edufintech.co.in)
 
-## License
-
-MIT License
 
