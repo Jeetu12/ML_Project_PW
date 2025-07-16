@@ -61,19 +61,19 @@ CryptoCurrency_Liquidity_Prediction/
 ├── .CSV data files/                        # Raw CSV files from CoinGecko
 │
 ├── Notebooks/
-│   └── Crypto\_Liquidity.ipynb   # Google Colab notebook (EDA + modeling)
+│   └── crypto_Liquidity_model.ipynb   # Google Colab notebook (EDA + modeling)
 │
 ├── Apps/
-│   ├── flask\_app.py             # Flask API for deployment
-│   └── streamlit\_app.py         # Streamlit web app
+│   ├── flask\flask_app.py             # Flask API for deployment
+│   └── streamlit\streamlit_app.py         # Streamlit web app
 │
 ├── Models/
-│   └── crypto\_liquidity\_model.pkl  # Trained ML model
+│   └── crypto_liquidity_model.pkl  # Trained ML model
 │
 ├── Reports/
-│   ├── EDA\_Report.pdf           # Summary of EDA & insights
-│   ├── HLD\_Document.pdf         # High-Level Design
-│   └── LLD\_Document.pdf         # Low-Level Design
+│   ├── EDA_Report.pdf           # Summary of EDA & insights
+│   ├── HLD_Document.pdf         # High-Level Design
+│   └── LLD_Document.pdf         # Low-Level Design
 │
 ├── README.md
 └── requirements.txt
