@@ -54,7 +54,7 @@ This project utilizes historical cryptocurrency data to **predict liquidity rati
 
 ---
 
-## Project Structure
+## Project Structure:
 
 ```
 CryptoCurrency_Liquidity_Prediction/
@@ -93,35 +93,34 @@ CryptoCurrency_Liquidity_Prediction/
 ```
 ---
 
-# Requirements
+# Requirements:-
 
-# Core ML & Data
+## Core ML & Data:
 numpy
 pandas
 scikit-learn
 matplotlib
 seaborn
 
-# For saving/loading models
+## For saving/loading models:
 pickle5  # optional if using older Python
 
-# API & App options
+## API & App options:
 flask     # for Flask API
 streamlit # for Streamlit UI
 
-# Optional (PDFs, Visual Reports)
+## Optional (PDFs, Visual Reports):
 fpdf
 
-# Version pinning (optional for stability)
-# numpy==1.24.3
-# scikit-learn==1.3.0
-# flask==2.3.3
-# streamlit==1.35.0
-
+## Version pinning (optional for stability):
+### numpy==1.24.3
+### scikit-learn==1.3.0
+### flask==2.3.3
+### streamlit==1.35.0
 
 ---
 
-## Features & Target
+## Features & Target:-
 
 - **Input Features**:
 
@@ -137,7 +136,7 @@ fpdf
 
 ---
 
-## Model Used
+## Model Used:
 
 - `RandomForestRegressor`
 
@@ -149,13 +148,13 @@ fpdf
 
   - **RMSE**: Low, consistent performance
 
-## Deployment
+## Deployment:-
 
-### Streamlit App
+### Streamlit App:
 
 https://mlprojectpw-pu4pcs5gfjlqdcmv2ef5ld.streamlit.app/
 
-### Flask API
+### Flask API:
 
 https://ml-project-pw.onrender.com/
 
@@ -171,11 +170,11 @@ POST Request Example:
   "mkt_cap": 770000000000
 }
 ```
-## Sample Output
+## Sample Output:
 
 Predicted Liquidity Ratio: 0.045832
 
-## Future Enhancements
+## Future Enhancements:
 
 * Add an LSTM or XGBoost model for improved accuracy
 
@@ -183,7 +182,7 @@ Predicted Liquidity Ratio: 0.045832
 
 * Extend time series trends using moving averages
 
-## Tech Stack
+## Tech Stack:
 
 * Python, Pandas, Scikit-learn
 
@@ -193,7 +192,7 @@ Predicted Liquidity Ratio: 0.045832
 
 * Matplotlib, Seaborn
 
-## Author
+## Author:
 
 **Arijit Chakraborty** — [EduFinTech](https://www.edufintech.co.in)
 
