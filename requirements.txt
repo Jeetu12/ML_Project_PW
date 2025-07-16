@@ -6,7 +6,7 @@ matplotlib
 seaborn
 
 # For saving/loading models
-pickle5  # optional if using older Python
+pickle  # optional if using older Python
 
 # API & App options
 flask     # for Flask API
