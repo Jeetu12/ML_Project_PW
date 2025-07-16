@@ -140,15 +140,11 @@ fpdf
 
 ### Streamlit App
 
-```bash
-streamlit run app/streamlit_app.py
-````
+https://mlprojectpw-pu4pcs5gfjlqdcmv2ef5ld.streamlit.app/
 
 ### Flask API
 
-```bash
-python app/flask_app.py
-```
+https://ml-project-pw.onrender.com/
 
 POST Request Example:
 
