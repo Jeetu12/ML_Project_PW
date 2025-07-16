@@ -56,16 +56,17 @@ This project utilizes historical cryptocurrency data to **predict liquidity rati
 
 ## Project Structure
 
+```
 CryptoCurrency_Liquidity_Prediction/
 │
-├── .CSV data files/                        # Raw CSV files from CoinGecko
+├── .CSV data files/                   # Raw CSV files from CoinGecko
 │
 ├── Notebooks/
 │   └── crypto_Liquidity_model.ipynb   # Google Colab notebook (EDA + modeling)
 │
 ├── Apps/
 │   ├── flask\flask_app.py             # Flask API for deployment
-│   └── streamlit\streamlit_app.py         # Streamlit web app
+│   └── streamlit\streamlit_app.py     # Streamlit web app
 │
 ├── Models/
 │   └── crypto_liquidity_model.pkl  # Trained ML model
@@ -89,7 +90,7 @@ CryptoCurrency_Liquidity_Prediction/
 │
 ├── README.md
 └── requirements.txt
-
+```
 ---
 
 # Requirements
