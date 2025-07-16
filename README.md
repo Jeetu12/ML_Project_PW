@@ -83,9 +83,9 @@ CryptoCurrency_Liquidity_Prediction/
 |   ├── Feature_importance.png
 |   ├── Visual_Report.py
 |
-├── Testing/
+├── Test/
 │   ├── PyTest.py           
-│   ├── Test.py
+│   ├── Testing.py
 │
 ├── README.md
 └── requirements.txt
